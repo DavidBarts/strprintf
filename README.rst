@@ -29,6 +29,10 @@ worth it. This allows uses like::
 If a ``char *`` were returned, it would take three statements (assignment,
 print, free) to accomplish the above without leaking memory.
 
+Note that while ``strprintf`` *returns* a standard C++ string, it does not
+*accept* such strings as input. It's still ``snprintf`` under the hood, and
+being a C function, ``snprintf`` knows nothing about C++ classes.
+
 A ``vstrprintf`` variant is also provided, so that you can easily get this
 functionality inside a varadic function.
 
