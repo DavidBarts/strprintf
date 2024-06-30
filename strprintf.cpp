@@ -1,9 +1,8 @@
 #define _blackcap_name_strprintf_cpp_
 
-#include <cstdio>
-#include <cstring>
-#include <memory>
 #include "strprintf.hpp"
+#include <cstdio>
+#include <memory>
 
 std::string strprintf(const char *format, ...)
 {
